@@ -184,7 +184,7 @@ public class BuenSaborBackApplication {
 
 
 			// Crear 2 sucursales para esa empresa
-			Sucursal sucursalChacras = Sucursal.builder().nombre("Sucursal Chacras de Coria").casaMatriz(true).empresa(empresaBrown).horarioApertura(LocalTime.of(17,0)).horarioCierre(LocalTime.of(23,0)).build();
+			Sucursal sucursalChacras = Sucursal.builder().nombre("Sucursal Chacras").casaMatriz(true).empresa(empresaBrown).horarioApertura(LocalTime.of(17,0)).horarioCierre(LocalTime.of(23,0)).build();
 			Domicilio domicilioViamonte = Domicilio.builder().cp(5509).calle("Viamonte").numero(500).localidad(localidad1).build();
 			sucursalChacras.setDomicilio(domicilioViamonte);
 			logger.info("Sucursal {}",sucursalChacras);
@@ -261,13 +261,13 @@ public class BuenSaborBackApplication {
 			logger.info("Insumo {}", cocaCola);
 
 			ArticuloInsumo sprite = ArticuloInsumo.builder().denominacion("sprite").unidadMedida(unidadMedidaLitros).esParaElaborar(false).categoria(categoriaGaseosas).stockActual(5).stockMinimo(25).stockMaximo(50).precioCompra(50.0).precioVenta(70.0).build();
-			ImagenArticulo imagenSprite = ImagenArticulo.builder().url("").articulo(sprite).build();
+			ImagenArticulo imagenSprite = ImagenArticulo.builder().url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4XBkzwaEGca9HgWe4eOrjLnCJmwAx0PVPRQ&s").articulo(sprite).build();
 			sprite.getImagenes().add(imagenSprite);
 			logger.info("Insumo {}", sprite);
 			articuloInsumoRepository.save(sprite); // Guardar primero el Articulo
 
 			ArticuloInsumo cerveza = ArticuloInsumo.builder().denominacion("Cerveza Rubia").unidadMedida(unidadMedidaLitros).esParaElaborar(false).categoria(categoriaCervezas).stockActual(5).stockMinimo(25).stockMaximo(50).precioCompra(100.0).precioVenta(170.0).build();
-			ImagenArticulo imagenCerveza = ImagenArticulo.builder().url("").articulo(cerveza).build();
+			ImagenArticulo imagenCerveza = ImagenArticulo.builder().url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0RCc9LZxJcmwrkwLb-TAcc3c-uNukj1ZyTg&s").articulo(cerveza).build();
 			cerveza.getImagenes().add(imagenCerveza);
 			logger.info("Insumo {}", cerveza);
 			articuloInsumoRepository.save(cerveza); // Guardar primero el Articulo
