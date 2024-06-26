@@ -31,7 +31,7 @@ public class SecurityConfiguration {
     private final String issuer = "https://dev-ivcgfpif76bc7frn.us.auth0.com/";
 
 
-    private final String corsAllowedOrigins = "https://ecommerce-buen-sabor-front-luciano-chagnauds-projects.vercel.app";
+    private final String corsAllowedOrigins = "https://ecommerce-buen-sabor-front.vercel.app";
 
 
     boolean webSecurityDebug = true;
